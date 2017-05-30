@@ -4,6 +4,9 @@
     <meta charset = "UTF-8">
     <title> masonry layout </title>
     <style>
+        body {
+        background: url('http://subtlepatterns.com/patterns/scribble_light.png');
+         }
       .columns {
         column-width:350px;
         column-gap : 15px;
@@ -24,6 +27,9 @@
         border-top:1px solid rgba(0,0,0,0.2);
         padding:10px;
         margin-top:11px
+      }
+      div.columns:hover figure:not(:hover) {
+	    opacity: 0.4;
       }
     </style>
 </head>
