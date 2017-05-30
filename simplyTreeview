@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "UTF-8">
+    <title> html css treeview </title>
+    <link rel='stylesheet' href='css_fontello/fontello/css/fontello.css'>
+    <style>
+      .tree input[type='checkbox'] {
+        display: none;
+      }
+      label::before {
+        content : '\f256';
+        font-family: fontello;
+      }
+      li input[type='checkbox']:checked ~ ul{
+        display: none;
+      }
+      a::before {
+        content: '\f14c';
+        font-family: fontello;
+      }
+      li input[type='checkbox']:checked + label::before{
+        content: '\f255';
+        font-family: fontello;
+      }
+      ul {
+        list-style-type: none;
+      }
+      a:link {
+        color: black;
+        text-decoration: none;
+      }
+      a:visited {
+        color: black;
+      }
+      a:active {
+        color : blue;
+      }
+    </style>
+</head>
+<body>
+  <ul class='tree'>
+    <li>
+      <input type='checkbox' id='check'>
+      <label for='check'>TreeView</label>
+      <ul>
+        <li><a href='#'>node1</a></li>
+        <li><a href='#'>node2</a></li>
+        <li>
+          <input type='checkbox' id='check2'>
+          <label for='check2'>TreeView2</label>
+          <ul>
+            <li><a href='#'>node2_1</a></li>
+            <li>
+              <input type='checkbox' id='check3'>
+              <label for='check3'>TreeView3</label>
+              <ul>
+                <li><a href='#'>node3_1</a></li>
+                <li><a href='#'>node3_2</a></li>
+                <li><a href='#'>node3_3</a></li>
+              </ul>
+            </li>
+            <li><a href='#'>node2_3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</body>
+</html>
