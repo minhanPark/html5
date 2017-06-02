@@ -15,10 +15,11 @@
       }
       .content {
         display: flex;
-        flex-shrink: 0;
+        
       }
       nav, aside {
         flex-basis: 150px;
+        flex-shrink: 0;
       }
     </style>
     <title>flex practice </title>
